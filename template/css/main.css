@@ -51,12 +51,15 @@ h4 {
     background-image: none;
     color: #df0d22;
 }
+
 .carousel-indicators li {
     border-color: #df0d22;
 }
+
 .carousel-indicators li.active {
     background-color: #df0d22;
 }
+
 .item h4 {
     font-size: 19px;
     line-height: 1.375em;
@@ -64,6 +67,7 @@ h4 {
     font-style: italic;
     margin: 70px 0;
 }
+
 .item span {
     font-style: normal;
 }
@@ -75,11 +79,7 @@ h4 {
 .panel:hover {
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
-.btn:hover {
-    border: 1px solid #df0d22;
-    background-color: #fff !important;
-    color: #df0d22;
-}
+
 .panel-heading {
     color: #fff !important;
     background-color: #df0d22 !important;
@@ -101,11 +101,40 @@ h4 {
     color: #aaa;
     font-size: 14px;
 }
-.btn {
+
+.headbtn {
+    margin: 15px 0;
+    background-color: #fff;
+    color: #df0d22;
+    border-radius: 50px;
+    border: 1px solid #fff;
+}
+
+.pulse{animation-iteration-count: infinite;}
+
+.fadeOutUp{animation-iteration-count: infinite;}
+
+.headbtn:hover {
+    border: 1px solid #fff;
+    background-color: #df0d22 !important;
+    color: #fff;
+}
+
+.btn, .btn_contacts, .bu {
     margin: 15px 0;
     background-color: #df0d22;
     color: #fff;
+    border-radius: 50px;
+    border: 1px solid #df0d22;
 }
+
+.btn:hover, .btn_contacts:hover {
+    border: 1px solid #df0d22;
+    background-color: #fff !important;
+    color: #df0d22;
+}
+
+
 .navbar {
     margin-bottom: 0;
     background-color: #4B3029;
@@ -143,7 +172,7 @@ footer .glyphicon {
     visibility: visible;
 }
 
-.welcome_text {
+#welcome_text {
     font-family: 'Oswald', sans-serif;
     font-size: 70px !important;
 }
@@ -172,16 +201,114 @@ footer .glyphicon {
     font-size: 14px;
 }
 
-.btn-lg {
-    margin-top: 25px;
-    /* padding-top: 25px; */
-    padding: 12px 21px;
-    font-size: 18px;
-    line-height: 1.3333333;
-    border-radius: 32px;
+.form_center {
+    width: 200px; /* Ширина элемента в пикселах */
+    padding: 10px; /* Поля вокруг текста */
+    margin: auto; /* Выравниваем по центру */
+    margin-left: 128px;
 }
 
+.fancybox-skin{
+    background-color: #ffeef4 !important;
+}
 
+.fancybox-inner {
+    width: auto !important;
+    height: auto !important;
+}
+
+#hidden form {
+    height: 300px;
+}
+
+#hidden, #hidden_write {
+    display: none;
+}
+
+#hidden label, #hidden_write label{
+    width: 100%;
+    display: block;
+    padding: 3px;
+}
+
+#name:focus {
+    outline: none;
+    border: 1px solid #df0d22;
+}
+
+#number:focus {
+    outline: none;
+    border: 1px solid #df0d22;
+}
+
+#comments:focus {
+    outline: none;
+    border: 1px solid #df0d22;
+}
+
+#email:focus {
+    outline: none;
+    border: 1px solid #df0d22;
+}
+
+#hidden input, #hidden_write input {
+    width: 100%;
+    display: block;
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.hidden_text {
+    text-align: center;
+    font-family: 'Gnuolane Free', sans-serif;
+    font-size: 35px;
+}
+
+.hidden_under_text {
+    color: #818181;
+    text-align: center;
+}
+
+.welcome_under {
+    color: #fff;
+    text-align: center;
+    font-size: 16px !important;
+}
+
+#hidden_write  {
+    display: none;
+}
+
+#hidden_write form {
+    height: 361px;
+    line-height: 0.8 !important;
+}
+
+#hidden_write button {
+    margin-top: 10px;
+    margin-left: 65px;
+}
+
+.sl_img {
+    width:130px !important;
+    height:130px !important;
+}
+
+.slider_cer {
+    max-width: 850px;
+    margin: 20px auto;
+}
+
+.img_part {
+    padding: 0;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.footr {
+    padding-top: 50px;
+}
 
 
 @keyframes slide {
@@ -206,11 +333,49 @@ footer .glyphicon {
 }
 
 
+#prompt-form {
+    display: inline-block;
+    padding: 5px 5px 5px 70px;
+    width: 200px;
+    border: 1px solid black;
+    background: white url(https://js.cx/clipart/prompt.png) no-repeat left 5px;
+    vertical-align: middle;
+}
 
+#prompt-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
 
+#prompt-form-container:before {
+    display: inline-block;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+}
 
+#cover-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 0.3;
+}
 
-
+#prompt-form input[name="text"] {
+    display: block;
+    margin: 5px;
+    width: 180px;
+}
 
 
 
