@@ -2,7 +2,7 @@
 //Документация: http://api.jquery.com/jquery.ajax/
 $("#callback").submit(function() {
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "template/php/telephone.php",
         data: $("#callback").serialize()
     }).done(function() {
@@ -16,7 +16,7 @@ $("#callback").submit(function() {
 
 $("#callback_text").submit(function() {
     $.ajax({
-        type: "GET",
+        type: "POST",
         url: "template/php/mail.php",
         data: $("#callback_text").serialize()
     }).done(function() {

@@ -13,20 +13,29 @@ $site = array(
     'title' => 'АБС - Агенство Бухгалтерского Сопровождения',
     'logo' => 'АБС',
 
-    // TO-DO: NAVBAR
+    // Меню
+    'menu1' => 'О нас',
+    'menu2' => 'Почему мы',
+    'menu3' => 'Сертификты',
+    'menu4' => 'Услуги',
+    'menu5' => 'Партнеры',
+    'menu6' => 'Контакты',
+
 
     // Заголовочная информация
     'welcome_text' => 'БУХГАЛТЕРСКИЕ УСЛУГИ В АЛМАТЫ',
     'under_welcome_text' => 'для бизнеса любого уровня',
+    'button' => 'Закажите обратный звонок',
+    'text_under_button' => 'и мы перезвоним Вам через 10 минут',
 
     // 1-й блок "О нас"
     'about_header_red' => 'О ',
     'about_header' => 'НАШЕЙ КОМПАНИИ',
     'about_text' => 'Наша компания — это настоящий сервисный центр для Вашего бизнеса,
-     с отличным качеством обслуживания и демократичными ценами на услуги.
-',
+     с отличным качеством обслуживания и демократичными ценами на услуги.',
     'about_red' => 'Индивидуальный подход к каждому клиенту.',
     'about_button' => 'Напишите нам',
+    'about_logo_img' => 'img/logo/logo.png',
 
     // 2-й блок "Наши цели"
     'mission_header_red' => 'НАШИ ',
@@ -98,6 +107,11 @@ $site = array(
     'cer_img_18' => 'img/certificates/img-150421153356-1.jpg',
     'cer_img_19' => 'img/certificates/img-150421153420-1.jpg',
     'cer_img_20' => 'img/certificates/img-150421153446-1.jpg',
+    'cer_img_21' => 'img/certificates/CAP Azizbek-1.jpg',
+    'cer_img_22' => 'img/certificates/CAP Natalya-1.jpg',
+    'cer_img_23' => 'img/certificates/Prof Azizbek-1.jpg',
+    'cer_img_24' => 'img/certificates/Prof Natalya-1.jpg',
+
 
     // Партнеры
 
@@ -109,12 +123,6 @@ $site = array(
     'par_img_6' => 'img/partners/Logo-VENTRA-159-na-53_seryj.png',
     'par_img_7' => 'img/partners/logo_inoxasia.png',
     'par_img_8' => 'img/partners/papirus1.png',
-    'par_img_9' => 'img/partners/partners_1.png',
-
-
-
-
-
 
     'reviews' => 'Отзывы',
 
@@ -152,16 +160,47 @@ $site = array(
     'services3_line3' => 'Составление процессуальных документов',
     'services3_line4' => 'Судебное представительство',
 
-    // 6-й блок "Контакты"
+    // 6-й блок "Партнеры"
+    'partners_header_red' => 'Наши',
+    'partners_header' => 'партнеры',
+    'partners_img' => 'img/partners/partners_1.png',
+
+
+    // 7-й блок "Контакты"
     'contacts_header' => 'КОНТАКТЫ',
     'contacts_text' => 'Напишите нам, и мы вам ответим за 15 минут',
     'contacts_adress' => ' Казыбек би 117, бизнес центр "Galianos" 5 этаж, офис 506',
     'contacts_telephones' => '+7 (771) 503-00-33; +7 (727) 328-27-27',
     'contacts_mail' => 'office@absuchet.kz',
 
+    // 8-й блок "Напишите нам"
+    'contacts_left_header' => 'Напишите нам, и мы вам',
+    'contacts_left_red' => 'перезвоним!',
+    'contacts_left_button' => 'Отправить',
+
+    // "Карта"
+    'footer_map' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2054.708337128433!2d76.92779681627715!3d43.25568876450291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836eb0a1f822ab%3A0x3ec68bc66cbad1f5!2z0YPQu9C40YbQsCDQmtCw0LfRi9Cx0LXQuiDQkdC4IDExNywg0JDQu9C80LDRgtGLLCDQmtCw0LfQsNGF0YHRgtCw0L0!5e0!3m2!1sru!2scz!4v1517509045763',
+
+    // "Низ"
+    'footer_company' => '© ООО «АБС - Агенство Бухгалтерского Сопровождения», 2015',
+    'footer_telephone' => '+7 (771) 503-00-33; +7 (727) 328-27-27',
+
+    // "Всплывающее окно 1"
+    'fancybox_1_header' => 'Оставьте',
+    'fancybox_1_header_red' => 'заявку',
+    'fancybox_1_under_text' => 'Мы гарантируем безопасность ваших данных',
+    'fancybox_1_name' => 'Ваше имя...',
+    'fancybox_1_telephone' => 'Ваш телефон...',
+    'fancybox_button' => 'Отправить',
+
+    // "Всплывающее окно 2"
+    'fancybox_2_header' => 'У вас есть',
+    'fancybox_2_header_red' => 'вопрос?',
+    'fancybox_2_under_text' => 'Мы ответим вам через 15 минут',
+    'fancybox_2_name' => 'Ваше имя...',
+    'fancybox_2_email' => 'Ваш E-mail...',
+    'fancybox_2_comment' => 'Коментарий...'
 );
-
-
 
 $smarty->assign('data', $site);
 $smarty->display('template.tpl');

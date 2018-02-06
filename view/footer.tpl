@@ -2,38 +2,25 @@
     <a href="#myPage" title="Вверх">
         <span class="glyphicon glyphicon-chevron-up animated fadeOutUp"></span>
     </a>
-    <p>© ООО «АБС - Агенство Бухгалтерского Сопровождения», 2015</p>
-    <p>+7 (771) 503-00-33; +7 (727) 328-27-27</p>
+    <p>{$data.footer_company}</p>
+    <p>{$data.footer_telephone}</p>
     <p>разработка сайта: mukanova98@gmail.com</p>
 </footer>
 
 <div id="hidden">
-    <form method="get" id="callback" action="../template/php/telephone.php" autocomplete="off">
-        <h3 class="hidden_text">Оставьте <span class="red">заявку</span></h3>
-        <p class="hidden_under_text">Мы гарантируем безопасность ваших данных</p>
+    <form method="post" id="callback" action="../template/php/telephone.php" autocomplete="off">
+        <h3 class="hidden_text">{$data.fancybox_1_header} <span class="red">{$data.fancybox_1_header_red}</span></h3>
+        <p class="hidden_under_text">{$data.fancybox_1_under_text}</p>
 
         <!-- END Hidden Required Fields -->
-        <input id="name" type="text" name="name" placeholder=" Ваше имя..." required><br>
-        <input id="number" type="tel" name="number" placeholder=" Ваш телефон..."><br>
-        <button type="submit" id="otpravka_tel" style=" margin-left: 65px;" class="bu form_center animated pulse">Отправить</button>
-
+        <input id="name" type="text" name="name" placeholder=" {$data.fancybox_1_name}" required><br>
+        <input id="email" type="email" name="email" placeholder=" {$data.fancybox_2_email}"><br>
+        <input id="number" type="tel" name="number" placeholder=" {$data.fancybox_1_telephone}"><br>
+        <textarea class="form-control" id="text" name="text" placeholder="{$data.fancybox_2_comment}" rows="5"></textarea>
+        <button type="submit" id="otpravka_tel" style=" margin-left: 65px;" class="bu form_center animated pulse">{$data.fancybox_button}</button>
     </form>
 </div>
 
-<div id="hidden_write">
-    <form method="get" id="callback_text" action="../template/php/telephone.php" autocomplete="off">
-        <h3 class="hidden_text">У вас есть <span class="red">вопрос? </span></h3>
-        <p class="hidden_under_text">Мы ответим вам через 15 минут</p>
-
-        <input id="name" type="text" name="name" placeholder=" Ваше имя..." required><br>
-        <input id="email" type="email" name="email" placeholder=" Ваш E-mail..."><br>
-
-        <textarea class="form-control" id="comments" name="comments" placeholder="Комментарий.." rows="5"></textarea>
-
-        <button type="submit" name="submit" id="btm_hidden" class="bu form_center animated pulse">Отправить</button>
-
-    </form>
-</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>

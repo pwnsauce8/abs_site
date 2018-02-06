@@ -3,10 +3,8 @@
 <div class="jumbotron text-center">
   <h1 id="welcome_text" class="animated bounceInDown">{$data.welcome_text}</h1>
   <p>{$data.under_welcome_text}</p>
-
-    {*<a href="#hidden" class="headbtn btn-lg animated pulse fancybox">Напишите нам</a>*}
-    <input href="#hidden" class="headbtn btn-lg animated pulse fancybox" type="button" value="Закажите обратный звонок" id="show-button">
-    <p class="welcome_under">и мы перезвоним Вам через 10 минут</p>
+    <input href="#hidden" class="headbtn btn-lg animated pulse fancybox" type="button" value="{$data.button}" id="show-button">
+    <p class="welcome_under">{$data.text_under_button}</p>
 </div>
 
 
@@ -20,11 +18,11 @@
       <h4>{$data.about_text}</h4><br>
       <h4 class="text"><span class="red">{$data.about_red}</span></h4>
       <br>
-      <input href="#hidden_write" class="btn btn-lg animated pulse fancybox" type="button" value="{$data.about_button}" id="show-button">
+      <input href="#hidden" class="btn btn-lg animated pulse fancybox" type="button" value="{$data.about_button}" id="show-button">
 
     </div>
     <div class="col-sm-4">
-      <img class="logo" src="img/logo/logo.png" alt="logo">
+      <img class="logo" src="{$data.about_logo_img}" alt="logo">
       <!--<span class="glyphicon glyphicon-signal logo"></span>-->
     </div>
   </div>
@@ -119,6 +117,10 @@
     <div class="center"><img class="sl_img" src="{$data.cer_img_18}" alt="Сертификат1" "></div>
     <div class="center"><img class="sl_img" src="{$data.cer_img_19}" alt="Сертификат1" "></div>
     <div class="center"><img class="sl_img" src="{$data.cer_img_20}" alt="Сертификат1" "></div>
+    <div class="center"><img class="sl_img" src="{$data.cer_img_21}" alt="Сертификат1" "></div>
+    <div class="center"><img class="sl_img" src="{$data.cer_img_22}" alt="Сертификат1" "></div>
+    <div class="center"><img class="sl_img" src="{$data.cer_img_23}" alt="Сертификат1" "></div>
+    <div class="center"><img class="sl_img" src="{$data.cer_img_24}" alt="Сертификат1" "></div>
   </div>
 </div>
 
@@ -228,9 +230,9 @@
 
 <div id="partners" class="container-fluid">
   <div class="text-center">
-    <h2 class="about_header"><span class="red">Наши</span> партнеры</h2>
+    <h2 class="about_header"><span class="red">{$data.partners_header_red}</span> {$data.partners_header}</h2>
     <h4></h4>
-    <img class="img_part slideanim" src="{$data.par_img_9}" alt="partners">
+    <img class="img_part slideanim" src="{$data.partners_img}" alt="partners">
   </div>
 </div>
 
@@ -243,11 +245,14 @@
       <p>{$data.contacts_text}</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>  {$data.contacts_adress}</p>
       <p><span class="glyphicon glyphicon-phone"></span>  {$data.contacts_telephones}</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>   {$data.contacts_mail}</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>   <a href="mailto:{$data.contacts_mail}">{$data.contacts_mail}</a></p>
     </div>
+
     <div class="col-sm-7 slideanim">
-      <h2 style="margin-top: 0;">Напишите нам, и мы вам <span class="red">перезвоним!</span></h2>
-        <form method="get" id="callback_text" action="../template/php/telephone.php" autocomplete="off">
+      <h2 style="margin-top: 0;">{$data.contacts_left_header} <span class="red">{$data.contacts_left_red}</span></h2>
+
+
+      <form method="get" id="callback_text" action="../template/php/telephone.php" autocomplete="off">
             <div class="row">
                 <div class="col-sm-6 form-group">
                     <input class="form-control" id="name" name="name" placeholder="Имя" type="text" required>
@@ -256,11 +261,12 @@
                     <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
                 </div>
             </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Комментарий" rows="5"></textarea><br>
+
+            <input style="margin-top: 6px" class="form-control" id="number" name="number" placeholder="Телефон" type="tel" required>
+            <textarea class="form-control" id="text" name="text" placeholder="Комментарий" rows="5"></textarea><br>
             <div class="row">
                 <div class="col-sm-12 form-group">
-
-                    <button type="submit" name="submit" id="btm_hidden" class="bu form_center">Отправить</button>
+                    <button type="submit" name="submit" id="btm_hidden" class="bu form_center">{$data.contacts_left_button}</button>
                 </div>
         </form>
 
@@ -270,11 +276,6 @@
 </div>
 
 <!-- Add Google Maps -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2054.708337128433!2d76.92779681627715!3d43.25568876450291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836eb0a1f822ab%3A0x3ec68bc66cbad1f5!2z0YPQu9C40YbQsCDQmtCw0LfRi9Cx0LXQuiDQkdC4IDExNywg0JDQu9C80LDRgtGLLCDQmtCw0LfQsNGF0YHRgtCw0L0!5e0!3m2!1sru!2scz!4v1517509045763"  frameborder="0" style=" width: 100%; height: 400px;" allowfullscreen></iframe>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
-{include file='view/footer.tpl'}
+<iframe src="{$data.footer_map}"  frameborder="0" style=" width: 100%; height: 400px;" allowfullscreen></iframe>
 
-<!-- <button class="btn btn-lg">Sign Up</button>-->
+{include file='view/footer.tpl'}

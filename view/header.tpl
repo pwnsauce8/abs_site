@@ -12,24 +12,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/template/css/main.css"/>
     <link rel="stylesheet" href="/template/css/media.css"/>
-    <link rel="shortcut icon" href="img/logo/favi.png">
-
+    <link rel="shortcut icon" href="/img/logo/favi.ico">
     <link rel="stylesheet" href="/template/libs/fancybox/jquery.fancybox.css"/>
     <link rel="stylesheet" href="/template/libs/countdown/jquery.countdown.css"/>
 
     <link rel="stylesheet" type="text/css" href="/template/libs/slick/slick.css"/>
-    // Add the new slick-theme.css if you want the default styling
     <link rel="stylesheet" type="text/css" href="/template/libs/slick/slick-theme.css"/>
-
-
-
-
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-
-
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
-
     <link rel="stylesheet" href="/template/css/animate.min.css" />
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -42,21 +33,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-
-
-
-
             <a class="navbar-brand" href="#myPage">{$data.logo}</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#services">Почему мы</a></li>
-                <li><a href="#portfolio">Сертификты</a></li>
-                <li><a href="#pricing">Услуги</a></li>
-                <li><a href="#partners">Партнеры</a></li>
-                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#about">{$data.menu1}</a></li>
+                <li><a href="#services">{$data.menu2}</a></li>
+                <li><a href="#portfolio">{$data.menu3}</a></li>
+                <li><a href="#pricing">{$data.menu4}</a></li>
+                <li><a href="#partners">{$data.menu5}</a></li>
+                <li><a href="#contact">{$data.menu6}</a></li>
             </ul>
         </div>
     </div>

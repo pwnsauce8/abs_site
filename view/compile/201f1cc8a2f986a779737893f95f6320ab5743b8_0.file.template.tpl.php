@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2018-02-02 21:50:31
+/* Smarty version 3.1.30, created on 2018-02-04 20:12:07
   from "C:\Open\OSPanel\domains\abs\view\template.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5a74b2f70da4b3_72231312',
+  'unifunc' => 'content_5a773ee72659e1_29243864',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '201f1cc8a2f986a779737893f95f6320ab5743b8' => 
     array (
       0 => 'C:\\Open\\OSPanel\\domains\\abs\\view\\template.tpl',
-      1 => 1517597430,
+      1 => 1517751361,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:view/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5a74b2f70da4b3_72231312 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5a773ee72659e1_29243864 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:view/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -32,10 +32,10 @@ $_smarty_tpl->_subTemplateRender("file:view/header.tpl", $_smarty_tpl->cache_id,
 </h1>
   <p><?php echo $_smarty_tpl->tpl_vars['data']->value['under_welcome_text'];?>
 </p>
-
-    
-    <input href="#hidden" class="headbtn btn-lg animated pulse fancybox" type="button" value="Закажите обратный звонок" id="show-button">
-    <p class="welcome_under">и мы перезвоним Вам через 10 минут</p>
+    <input href="#hidden" class="headbtn btn-lg animated pulse fancybox" type="button" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['button'];?>
+" id="show-button">
+    <p class="welcome_under"><?php echo $_smarty_tpl->tpl_vars['data']->value['text_under_button'];?>
+</p>
 </div>
 
 
@@ -53,12 +53,13 @@ $_smarty_tpl->_subTemplateRender("file:view/header.tpl", $_smarty_tpl->cache_id,
       <h4 class="text"><span class="red"><?php echo $_smarty_tpl->tpl_vars['data']->value['about_red'];?>
 </span></h4>
       <br>
-      <input href="#hidden_write" class="btn btn-lg animated pulse fancybox" type="button" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['about_button'];?>
+      <input href="#hidden" class="btn btn-lg animated pulse fancybox" type="button" value="<?php echo $_smarty_tpl->tpl_vars['data']->value['about_button'];?>
 " id="show-button">
 
     </div>
     <div class="col-sm-4">
-      <img class="logo" src="img/logo/logo.png" alt="logo">
+      <img class="logo" src="<?php echo $_smarty_tpl->tpl_vars['data']->value['about_logo_img'];?>
+" alt="logo">
       <!--<span class="glyphicon glyphicon-signal logo"></span>-->
     </div>
   </div>
@@ -197,6 +198,14 @@ $_smarty_tpl->_subTemplateRender("file:view/header.tpl", $_smarty_tpl->cache_id,
 " alt="Сертификат1" "></div>
     <div class="center"><img class="sl_img" src="<?php echo $_smarty_tpl->tpl_vars['data']->value['cer_img_20'];?>
 " alt="Сертификат1" "></div>
+    <div class="center"><img class="sl_img" src="<?php echo $_smarty_tpl->tpl_vars['data']->value['cer_img_21'];?>
+" alt="Сертификат1" "></div>
+    <div class="center"><img class="sl_img" src="<?php echo $_smarty_tpl->tpl_vars['data']->value['cer_img_22'];?>
+" alt="Сертификат1" "></div>
+    <div class="center"><img class="sl_img" src="<?php echo $_smarty_tpl->tpl_vars['data']->value['cer_img_23'];?>
+" alt="Сертификат1" "></div>
+    <div class="center"><img class="sl_img" src="<?php echo $_smarty_tpl->tpl_vars['data']->value['cer_img_24'];?>
+" alt="Сертификат1" "></div>
   </div>
 </div>
 
@@ -331,9 +340,11 @@ $_smarty_tpl->_subTemplateRender("file:view/header.tpl", $_smarty_tpl->cache_id,
 
 <div id="partners" class="container-fluid">
   <div class="text-center">
-    <h2 class="about_header"><span class="red">Наши</span> партнеры</h2>
+    <h2 class="about_header"><span class="red"><?php echo $_smarty_tpl->tpl_vars['data']->value['partners_header_red'];?>
+</span> <?php echo $_smarty_tpl->tpl_vars['data']->value['partners_header'];?>
+</h2>
     <h4></h4>
-    <img class="img_part slideanim" src="<?php echo $_smarty_tpl->tpl_vars['data']->value['par_img_9'];?>
+    <img class="img_part slideanim" src="<?php echo $_smarty_tpl->tpl_vars['data']->value['partners_img'];?>
 " alt="partners">
   </div>
 </div>
@@ -351,12 +362,18 @@ $_smarty_tpl->_subTemplateRender("file:view/header.tpl", $_smarty_tpl->cache_id,
 </p>
       <p><span class="glyphicon glyphicon-phone"></span>  <?php echo $_smarty_tpl->tpl_vars['data']->value['contacts_telephones'];?>
 </p>
-      <p><span class="glyphicon glyphicon-envelope"></span>   <?php echo $_smarty_tpl->tpl_vars['data']->value['contacts_mail'];?>
-</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>   <a href="mailto:<?php echo $_smarty_tpl->tpl_vars['data']->value['contacts_mail'];?>
+"><?php echo $_smarty_tpl->tpl_vars['data']->value['contacts_mail'];?>
+</a></p>
     </div>
+
     <div class="col-sm-7 slideanim">
-      <h2 style="margin-top: 0;">Напишите нам, и мы вам <span class="red">перезвоним!</span></h2>
-        <form method="get" id="callback_text" action="../template/php/telephone.php" autocomplete="off">
+      <h2 style="margin-top: 0;"><?php echo $_smarty_tpl->tpl_vars['data']->value['contacts_left_header'];?>
+ <span class="red"><?php echo $_smarty_tpl->tpl_vars['data']->value['contacts_left_red'];?>
+</span></h2>
+
+
+      <form method="get" id="callback_text" action="../template/php/telephone.php" autocomplete="off">
             <div class="row">
                 <div class="col-sm-6 form-group">
                     <input class="form-control" id="name" name="name" placeholder="Имя" type="text" required>
@@ -365,11 +382,13 @@ $_smarty_tpl->_subTemplateRender("file:view/header.tpl", $_smarty_tpl->cache_id,
                     <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
                 </div>
             </div>
-            <textarea class="form-control" id="comments" name="comments" placeholder="Комментарий" rows="5"></textarea><br>
+
+            <input style="margin-top: 6px" class="form-control" id="number" name="number" placeholder="Телефон" type="tel" required>
+            <textarea class="form-control" id="text" name="text" placeholder="Комментарий" rows="5"></textarea><br>
             <div class="row">
                 <div class="col-sm-12 form-group">
-
-                    <button type="submit" name="submit" id="btm_hidden" class="bu form_center">Отправить</button>
+                    <button type="submit" name="submit" id="btm_hidden" class="bu form_center"><?php echo $_smarty_tpl->tpl_vars['data']->value['contacts_left_button'];?>
+</button>
                 </div>
         </form>
 
@@ -379,14 +398,11 @@ $_smarty_tpl->_subTemplateRender("file:view/header.tpl", $_smarty_tpl->cache_id,
 </div>
 
 <!-- Add Google Maps -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2054.708337128433!2d76.92779681627715!3d43.25568876450291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836eb0a1f822ab%3A0x3ec68bc66cbad1f5!2z0YPQu9C40YbQsCDQmtCw0LfRi9Cx0LXQuiDQkdC4IDExNywg0JDQu9C80LDRgtGLLCDQmtCw0LfQsNGF0YHRgtCw0L0!5e0!3m2!1sru!2scz!4v1517509045763"  frameborder="0" style=" width: 100%; height: 400px;" allowfullscreen></iframe>
-<!--
-To use this code on your website, get a free API key from Google.
-Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
--->
+<iframe src="<?php echo $_smarty_tpl->tpl_vars['data']->value['footer_map'];?>
+"  frameborder="0" style=" width: 100%; height: 400px;" allowfullscreen></iframe>
+
 <?php $_smarty_tpl->_subTemplateRender("file:view/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-
-<!-- <button class="btn btn-lg">Sign Up</button>--><?php }
+<?php }
 }
